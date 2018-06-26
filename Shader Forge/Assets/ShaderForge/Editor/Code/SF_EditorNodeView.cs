@@ -6,6 +6,8 @@ using System.Xml;
 using System.IO;
 using System.Linq;
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 namespace ShaderForge {
 
 	public enum ConnectionLineStyle { Bezier, Linear, Rectilinear };
@@ -492,8 +494,8 @@ namespace ShaderForge {
 		}
 
 
-		public void OnDroppedSubstance(ProceduralMaterial procMat){
-
+		public void OnDroppedSubstance(ProceduralMaterial procMat)
+		{
 			Texture diffuse = TryGetProceduralTexture(procMat, "_MainTex");
 			Texture normal = TryGetProceduralTexture(procMat, "_BumpMap");
 			//Texture parallax = TryGetProceduralTexture(procMat, "_ParallaxMap");
